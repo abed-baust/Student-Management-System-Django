@@ -24,7 +24,6 @@ SECRET_KEY = 'so*rai_2(lk7t(yh%de+_kp_c%*r_b9wkga%gyo5tl9_8_r!xx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = ["*"]
 
 MEDIA_URL = "/media/"
@@ -47,7 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     # ===Enable Only Making Project Live on Heroku==
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,14 +83,14 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 DATABASES = {
     'default': {
         # =====Enable Only Making Project Live on Heroku====
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'student_management_system',
-        'USER': 'student_management_system',
-        'PASSWORD': 'student_management_password',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'student_management_system',
+        # 'USER': 'student_management_system',
+        # 'PASSWORD': 'student_management_password',
+        # 'HOST': 'localhost',
+        # 'PORT': '3306'
     }
 }
 
